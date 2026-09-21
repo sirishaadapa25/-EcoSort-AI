@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analyze Waste – EcoSort AI</title>
+  <meta name="description" content="Describe a waste item and get its category and disposal guidance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="EcoSort AI home">
+        <svg class="mark" viewBox="0 0 40 32" width="40" height="32" aria-hidden="true">
+          <rect x="0" y="6" width="6" height="26" rx="1.5" fill="#1F7A4D"/>
+          <rect x="8.5" y="0" width="6" height="32" rx="1.5" fill="#2A62B0"/>
+          <rect x="17" y="10" width="6" height="22" rx="1.5" fill="#B83232"/>
+          <rect x="25.5" y="4" width="6" height="28" rx="1.5" fill="#6444AB"/>
+          <rect x="34" y="12" width="6" height="20" rx="1.5" fill="#56606B"/>
+        </svg>
+        <span>
+          <span class="brand-name">EcoSort AI</span>
+          <span class="brand-tag">AI-Powered Waste Segregation &amp; Sustainable Disposal</span>
+        </span>
+      </a>
+      <nav aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="analyze.html" aria-current="page">Analyze</a>
+        <a href="categories.html">Categories</a>
+        <a href="responsible-ai.html">Responsible AI</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head wrap">
+      <h1>Analyze waste</h1>
+      <p class="section-lead">Describe one item and get its waste category and disposal guidance.</p>
+    </section>
+
+    <section id="analyze" class="workbench wrap" aria-labelledby="analyze-label">
+      <form id="analyze-form" class="panel input-panel" novalidate>
+        <label id="analyze-label" for="waste-input">What waste do you want to dispose of?</label>
+        <input id="waste-input" name="waste" type="text" maxlength="200" autocomplete="off"
+               placeholder="Example: plastic bottle" aria-describedby="input-hint input-error">
+        <p id="input-error" class="field-error" role="alert" hidden></p>
+        <button id="analyze-btn" type="submit">Analyze Waste</button>
+        <p id="input-hint" class="hint">Describe one item at a time. Please don't include personal information.</p>
+
+        <div class="examples">
+          <p class="examples-title">Try an example</p>
+          <ul>
+            <li><button type="button" class="chip" data-example="plastic water bottle">plastic water bottle</button></li>
+            <li><button type="button" class="chip" data-example="banana peel">banana peel</button></li>
+            <li><button type="button" class="chip" data-example="used battery">used battery</button></li>
+            <li><button type="button" class="chip" data-example="old mobile phone">old mobile phone</button></li>
+            <li><button type="button" class="chip" data-example="cardboard box">cardboard box</button></li>
+            <li><button type="button" class="chip" data-example="unknown chemical container">unknown chemical container</button></li>
+          </ul>
+        </div>
+      </form>
+
+      <div class="panel result-panel" id="result-panel" aria-live="polite" aria-busy="false">
+        <div id="state-empty" class="state">
+          <p class="state-title">Your result will appear here</p>
+          <p>Enter an item or pick an example. You'll get the waste category, how to dispose of it, and why.</p>
+        </div>
+
+        <div id="state-loading" class="state" hidden>
+          <p class="state-title">Analyzing your item…</p>
+          <p>This can take a few seconds.</p>
+          <div class="loader" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+
+        <div id="state-error" class="state state-error" hidden>
+          <p class="state-title">Couldn't analyze that item</p>
+          <p id="error-message"></p>
+        </div>
+
+        <article id="result" class="result" hidden>
+          <div id="demo-banner" class="demo-banner" hidden>
+            <p class="demo-title" id="demo-title"></p>
+            <p id="demo-detail"></p>
+          </div>
+          <div class="result-cat">
+            <p class="k">Item</p>
+            <p class="v-item" id="r-item"></p>
+            <p class="k">Waste category</p>
+            <h2 id="r-category"></h2>
+          </div>
+          <dl class="result-body">
+            <div><dt>Recommended action</dt><dd id="r-action"></dd></div>
+            <div><dt>Sustainability tip</dt><dd id="r-tip"></dd></div>
+            <div><dt>Explanation</dt><dd id="r-explanation"></dd></div>
+            <div class="uncertainty"><dt>Uncertainty</dt><dd id="r-uncertainty"></dd></div>
+          </dl>
+          <p class="source-line" id="source-line"></p>
+          <p class="result-link" id="cat-link-wrap" hidden><a id="cat-link" href="categories.html">See this category</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>EcoSort AI | AI for Sustainability | SDG 12</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

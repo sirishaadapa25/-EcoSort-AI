@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Waste Categories – EcoSort AI</title>
+  <meta name="description" content="The five waste categories: organic, recyclable, hazardous, e-waste, and general.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="EcoSort AI home">
+        <svg class="mark" viewBox="0 0 40 32" width="40" height="32" aria-hidden="true">
+          <rect x="0" y="6" width="6" height="26" rx="1.5" fill="#1F7A4D"/>
+          <rect x="8.5" y="0" width="6" height="32" rx="1.5" fill="#2A62B0"/>
+          <rect x="17" y="10" width="6" height="22" rx="1.5" fill="#B83232"/>
+          <rect x="25.5" y="4" width="6" height="28" rx="1.5" fill="#6444AB"/>
+          <rect x="34" y="12" width="6" height="20" rx="1.5" fill="#56606B"/>
+        </svg>
+        <span>
+          <span class="brand-name">EcoSort AI</span>
+          <span class="brand-tag">AI-Powered Waste Segregation &amp; Sustainable Disposal</span>
+        </span>
+      </a>
+      <nav aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="analyze.html">Analyze</a>
+        <a href="categories.html" aria-current="page">Categories</a>
+        <a href="responsible-ai.html">Responsible AI</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head wrap">
+      <h1>Waste categories</h1>
+      <p class="section-lead">Five groups cover most household and campus waste. Bin colours follow the common green, blue, and red convention. Open this page from a result and the matching bin opens.</p>
+    </section>
+
+    <section class="categories wrap" aria-label="Waste categories">
+      <div class="bins">
+        <article class="bin" id="organic" data-cat="organic">
+          <div class="lid"></div>
+          <div class="bin-body">
+            <h2>Organic / Wet</h2>
+            <p>Food scraps and other material that breaks down naturally.</p>
+            <p class="eg">Banana peel, leftovers, vegetable trimmings</p>
+          </div>
+        </article>
+        <article class="bin" id="recyclable" data-cat="recyclable">
+          <div class="lid"></div>
+          <div class="bin-body">
+            <h2>Recyclable / Dry</h2>
+            <p>Clean, dry materials that can often be recycled. Acceptance depends on your area.</p>
+            <p class="eg">Plastic bottles, cardboard, glass bottles</p>
+          </div>
+        </article>
+        <article class="bin" id="hazardous" data-cat="hazardous">
+          <div class="lid"></div>
+          <div class="bin-body">
+            <h2>Hazardous</h2>
+            <p>Items that can harm people or the environment if thrown in regular bins.</p>
+            <p class="eg">Used batteries, chemical containers, paint</p>
+          </div>
+        </article>
+        <article class="bin" id="ewaste" data-cat="ewaste">
+          <div class="lid"></div>
+          <div class="bin-body">
+            <h2>E-Waste</h2>
+            <p>Electronic and electrical items that need special collection.</p>
+            <p class="eg">Old phones, chargers, earphones</p>
+          </div>
+        </article>
+        <article class="bin" id="general" data-cat="general">
+          <div class="lid"></div>
+          <div class="bin-body">
+            <h2>General Waste</h2>
+            <p>Items that don't fit the other groups and can't be recycled locally.</p>
+            <p class="eg">Used tissues, soiled wrappers</p>
+          </div>
+        </article>
+      </div>
+      <p class="cta-row"><a class="btn" href="analyze.html">Analyze an item</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>EcoSort AI | AI for Sustainability | SDG 12</p>
+    </div>
+  </footer>
+
+</body>
+</html>

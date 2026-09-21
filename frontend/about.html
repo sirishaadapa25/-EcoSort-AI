@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About – EcoSort AI</title>
+  <meta name="description" content="The problem, SDG alignment, and approach behind EcoSort AI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="EcoSort AI home">
+        <svg class="mark" viewBox="0 0 40 32" width="40" height="32" aria-hidden="true">
+          <rect x="0" y="6" width="6" height="26" rx="1.5" fill="#1F7A4D"/>
+          <rect x="8.5" y="0" width="6" height="32" rx="1.5" fill="#2A62B0"/>
+          <rect x="17" y="10" width="6" height="22" rx="1.5" fill="#B83232"/>
+          <rect x="25.5" y="4" width="6" height="28" rx="1.5" fill="#6444AB"/>
+          <rect x="34" y="12" width="6" height="20" rx="1.5" fill="#56606B"/>
+        </svg>
+        <span>
+          <span class="brand-name">EcoSort AI</span>
+          <span class="brand-tag">AI-Powered Waste Segregation &amp; Sustainable Disposal</span>
+        </span>
+      </a>
+      <nav aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="analyze.html">Analyze</a>
+        <a href="categories.html">Categories</a>
+        <a href="responsible-ai.html">Responsible AI</a>
+        <a href="about.html" aria-current="page">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head wrap">
+      <h1>About EcoSort AI</h1>
+      <p class="section-lead">An AI-powered platform that helps users identify waste categories and learn responsible disposal practices for more sustainable everyday decisions.</p>
+
+    <section class="wrap about" aria-label="About the project">
+      <dl class="rai-list about-list">
+        <div><dt>The problem</dt><dd>Improper waste segregation is common in colleges, homes, and communities. People may not know whether an item belongs in organic/wet, recyclable/dry, hazardous, e-waste, or general waste. Wrong segregation can contaminate recyclable materials and reduce the effectiveness of waste management.</dd></div>
+        <div><dt>The question</dt><dd>How might we use AI to help people correctly identify and segregate waste and provide appropriate disposal guidance so that waste management becomes more sustainable?</dd></div>
+        <div><dt>Who it is for</dt><dd>College students, households, teachers, community members, and anyone who wants basic waste-disposal guidance.</dd></div>
+        <div><dt>SDG 12 (primary)</dt><dd>Responsible Consumption and Production. The project supports responsible waste handling, recycling, reuse, and sustainable consumption.</dd></div>
+        <div><dt>SDG 13 (secondary)</dt><dd>Climate Action. Better waste management is intended to contribute to reducing environmental impact. The project does not claim to solve climate change.</dd></div>
+        <div><dt>How it works</dt><dd>The frontend sends your description to a Flask REST API. The backend passes it to an AI model with a prompt that limits answers to five categories and forbids inventing local rules, then checks the answer before showing it.</dd></div>
+        <div><dt>Built with</dt><dd>HTML, CSS, and JavaScript on the frontend. Python and Flask on the backend.</dd></div>
+      </dl>
+      <p class="cta-row"><a class="btn" href="analyze.html">Analyze Waste</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>EcoSort AI | AI for Sustainability | SDG 12</p>
+    </div>
+  </footer>
+
+</body>
+</html>
